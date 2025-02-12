@@ -17,13 +17,13 @@ def multiple_linear_regression(X, y, learning_rate=0.01, n_iterations=1000):
 
 
 X = np.array([[1, 2], [2, 3], [3, 1], [4, 4], [5, 2]])  # Two features
-y = np.array([3, 5, 2, 7, 6])  # Outcome
+y = np.array([3, 5, 2, 7, 6])
 
 w = multiple_linear_regression(X, y)
 print("Coefficients (including intercept):", w)
 
 # Make Predictions
 X_new = np.array([[6,3], [2,1]])
-X_new = np.concatenate((np.ones((X_new.shape[0], 1)), X_new), axis=1) # Add bias term to X_new
+X_new = np.concatenate((np.ones((X_new.shape[0], 1)), X_new), axis=1) # bias term to X_newAdd 
 y_pred = X_new @ w
 print("Predictions for X_new", y_pred)
